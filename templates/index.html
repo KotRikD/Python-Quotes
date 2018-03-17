@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>KotRik Quotes</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="static/assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="static/assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="static/assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">Цитатка</a></li>
+							<li><a href="#one">Добавить цитату</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>Цитата #{{ idquote }}</h1>
+								<div style="margin-bottom: 20px;">{{ textquote }}</div>
+							<ul class="actions">
+								<form action="" method="GET">
+							   	<li><input class="6u 12u$(xsmall)" name="id" type="text" value=""></li>
+							   	<li><button class="button" type="submit">Показать</button></li>
+							   	<li><a class="button special" href="/">Случайная</a></li>
+							 </form>
+							</ul>
+						</div>
+					</section>
+
+				<!-- One -->
+					<section id="one" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>Добавление цитат</h1>
+							<p>Цитаты может добавлять только админ!</p>
+								<form action="/addquote" method="POST">
+									<div class="row uniform">
+									<div class="8u 12u$(small)">
+										<textarea name="text" placeholder="Цитата" rows="6"></textarea>
+									</div>
+									<div class="4u 12u$(xsmall)">
+										<input class="6u 12u$(xsmall)" name="pass" type="text" placeholder="Ключ">
+									</div>
+									<div class="4u 12u$(xsmall)">
+							   		<button class="button special" type="submit">Добавить</button>
+									</div>
+								</div>
+						</div>
+					</section>
+
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>Количество цитат: {{ c }}. &copy; <a href="http://kotrik.ru">KotRik</a>. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="static/assets/js/jquery.min.js"></script>
+			<script src="static/assets/js/jquery.scrollex.min.js"></script>
+			<script src="static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="static/assets/js/skel.min.js"></script>
+			<script src="static/assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="static/assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="static/assets/js/main.js"></script>
+
+	</body>
+</html>
